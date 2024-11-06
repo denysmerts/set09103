@@ -1,0 +1,44 @@
+.book-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    &__content {
+      display: flex;
+      gap: 50px;
+      overflow: hidden;
+      width: 100%;
+      justify-content: center;
+      color: black;
+  
+      .book-slider__book {
+        width: 200px;
+        text-align: center;
+  
+        .book-slider__cover {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  
+    &__buttons {
+      margin-top: 1rem;
+      display: flex;
+      gap: 19px;
+  
+      .book-slider__button {
+        width: 18px;
+        height: 18px;
+        background-color: #ddd;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+  
+        &.active {
+          background-color: #64AEF4;
+        }
+      }
+    }
+  }
+  

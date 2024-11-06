@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+
+  background-color: #020104;
+
+  &_intro {
+    display: flex;
+    align-items: center;
+  }
+
+  &_logo {
+    margin-right: 15px;
+  }
+
+  &_title {
+    text-transform: uppercase;
+    color: #f29c0d;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &_links {
+    gap: 45px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-decoration: none;
+  }
+}
+
+.navbar_links a {
+  text-decoration: none; // Removes default underline
+  color: inherit; // Allows link to take color from parent
+}
+
+.navbar_links a.active-link {
+  color: #f29c0d; // Yellow color for the active link
+  font-weight: bold; // Bold for active link
+}
