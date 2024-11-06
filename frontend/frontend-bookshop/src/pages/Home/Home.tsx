@@ -1,4 +1,4 @@
-import { ReactComponent as BookShelfSVG } from "../../assets/bookshelf.png";
+import { ReactComponent as BookShelfSVG } from "../../assets/bookshelf.svg";
 import { useNavigate } from "react-router-dom";
 import { Slider, Searchbar } from "../../components";
 import { books } from "../../mockData/books";
