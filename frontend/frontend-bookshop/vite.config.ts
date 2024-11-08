@@ -7,6 +7,10 @@ export default defineConfig({
   plugins: [react(), svgr()],
   server: {
     host: true,  // Allow access from any IP address
-    port: 5000,  // You can specify the port you want to use (default is 3000)
+    port: 5000,  // Port for React app (default is 3000)
+    proxy: {
+      // Proxy API requests to Flask backend on port 8080
+      '/api': 'http://127.0.0.1:8080',
+    },
   },
 });
