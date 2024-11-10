@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { Home, Shop, About, Checkout } from "./pages";
 import "./App.css";
 import { Basket } from "./pages/Basket/Basket";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
