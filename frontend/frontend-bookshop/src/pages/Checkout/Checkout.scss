@@ -15,15 +15,47 @@
     padding-top: 70px;
     color: black;
   }
+
   &__wrapper {
     display: flex;
     gap: 50px;
+
     &__shipping {
-      display: flex;
-      flex-direction: column;
       border: solid 1px rgb(0, 0, 0, 50%);
       border-radius: 20px;
       padding: 40px;
+
+      &__form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__save-button {
+        margin-top: 13px;
+        background-color: #ffffff;
+        color: orange;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 25px;
+        padding: 15px 50px;
+        border: solid 1px orange;
+        cursor: pointer;
+      }
+
+      &__save-button:hover {
+        background-color: orange;
+        color: white;
+      }
+
+      &__separator {
+        display: flex;
+        gap: 20px;
+      }
+
+      &__address-separator {
+        display: flex;
+        flex-direction: column;
+      }
 
       &__title {
         color: black;
@@ -31,89 +63,84 @@
         font-weight: bold;
         margin-bottom: 10px;
       }
+
       &__line {
         border: solid 1px rgb(0, 0, 0, 30%);
         margin-bottom: 40px;
       }
+
       &__input {
         background-color: transparent;
         border: solid 1px rgb(0, 0, 0, 50%);
-        border-radius: 5px;
-        padding: 5px 10px;
+        border-radius: 10px;
+        padding: 15px;
         margin-bottom: 20px;
         color: black;
       }
     }
+
     &__info {
       border: solid 1px rgb(0, 0, 0, 50%);
       border-radius: 20px;
       padding: 25px;
+
       &__title {
         color: black;
         font-size: 30px;
         font-weight: bold;
         margin-bottom: 10px;
       }
+
       &__line {
         border: solid 1px rgb(0, 0, 0, 30%);
-        margin-bottom: 15px;
-        margin-top: 15px;
+        margin: 15px 0;
       }
-      &__y {
+
+      &__total {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+      }
+
+      &__sticker {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: rgb(252, 198, 111, 70%);
+        padding: 15px;
+
+        &__title {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 26px;
+          color: #191d81;
+        }
+      }
+
+      &__information-text {
+        padding: 10px;
+      }
+
+      &__order-button {
+        background-color: orange;
+        width: 100%;
+        font-size: 25px;
+        border-radius: 25px;
+        padding: 15px;
+        color: white;
+        border: none;
+      }
+
+      &__order-button:hover {
+        background-color: rgb(255, 180, 40);
+        cursor: pointer;
       }
     }
   }
 }
 
-.x {
-  display: flex;
-  gap: 20px;
-}
-
-.button {
-  background-color: #e41e1e;
-  font-size: 32px;
-  font-weight: bold;
-  border-radius: 25px;
-  padding: 15px 50px;
-  color: white;
-}
-
-.button-s {
-  background-color: #e41e1e;
-  width: 100%;
-  font-size: 15px;
-  border-radius: 25px;
-  padding: 10px 10px;
-  color: white;
-  border: none;
-}
-
-.yellow {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  background-color: rgb(252, 198, 111, 70%);
-  padding: 15px;
-}
-
-.text1 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 26px;
-  color: 191D81;
-}
-
 .line {
   border: solid 1px rgb(0, 0, 0, 30%);
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-
-.text2 {
-  padding: 10px;
+  margin: 15px 0;
 }

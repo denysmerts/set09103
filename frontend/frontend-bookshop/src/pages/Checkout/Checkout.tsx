@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./Checkout.scss";
 
-export const Checkout: React.FC = () => {
+export const Checkout = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -64,12 +64,15 @@ export const Checkout: React.FC = () => {
       <div className="checkout-page__title">Checkout</div>
       <div className="checkout-page__wrapper">
         <div className="checkout-page__wrapper__shipping">
-          <form onSubmit={handleSaveAndContinue}>
+          <form
+            onSubmit={handleSaveAndContinue}
+            className="checkout-page__wrapper__shipping__form"
+          >
             <div className="checkout-page__wrapper__shipping__title">
               Shipping
             </div>
             <div className="checkout-page__wrapper__shipping__line"></div>
-            <div className="x">
+            <div className="checkout-page__wrapper__shipping__separator">
               <input
                 className="checkout-page__wrapper__shipping__input"
                 type="text"
@@ -90,24 +93,27 @@ export const Checkout: React.FC = () => {
               />
             </div>
 
-            <input
-              type="text"
-              placeholder="Delivery address"
-              className="checkout-page__wrapper__shipping__input"
-              name="address1"
-              value={formData.address1}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Delivery address (cont'd)"
-              className="checkout-page__wrapper__shipping__input"
-              name="address2"
-              value={formData.address2}
-              onChange={handleChange}
-            />
-            <div className="x">
+            <div className="checkout-page__wrapper__shipping__address-separator">
+              <input
+                type="text"
+                placeholder="Delivery address"
+                className="checkout-page__wrapper__shipping__input"
+                name="address1"
+                value={formData.address1}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Delivery address (cont'd)"
+                className="checkout-page__wrapper__shipping__input"
+                name="address2"
+                value={formData.address2}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="checkout-page__wrapper__shipping__separator">
               <input
                 type="text"
                 placeholder="City"
@@ -128,7 +134,10 @@ export const Checkout: React.FC = () => {
               />
             </div>
 
-            <button type="submit" className="button">
+            <button
+              type="submit"
+              className="checkout-page__wrapper__shipping__save-button"
+            >
               Save and Continue
             </button>
           </form>
@@ -141,33 +150,36 @@ export const Checkout: React.FC = () => {
             Order Summary
           </div>
           <div className="checkout-page__wrapper__info__line"></div>
-          <div className="checkout-page__wrapper__info__y">
+          <div className="checkout-page__wrapper__info__total">
             <div>Item Total</div>
             <div>${totalPrice.toFixed(2)}</div>
           </div>
-          <div className="checkout-page__wrapper__info__y">
+          <div className="checkout-page__wrapper__info__total">
             <div>Delivery Total</div>
             <div>0$</div>
           </div>
           <div className="checkout-page__wrapper__info__line"></div>
-          <div className="checkout-page__wrapper__info__y">
+          <div className="checkout-page__wrapper__info__total">
             <div>Total</div>
             <div>${totalPrice.toFixed(2)}</div>
           </div>
-          <div className="yellow">
-            <div className="text1">
+          <div className="checkout-page__wrapper__info__sticker">
+            <div className="checkout-page__wrapper__info__sticker__title">
               You’ll raise $6.40 for local <br />
               bookshops!
             </div>
             <div className="line"></div>
-            <div className="">
+            <div>
               Our website offset carbon <br /> emissions from every delivery.
             </div>
           </div>
-          <div className="text2">
+          <div className="checkout-page__wrapper__info__information-text">
             Please ensure all your information is correct.
           </div>
-          <button onClick={handleOrder} className="button-s">
+          <button
+            onClick={handleOrder}
+            className="checkout-page__wrapper__info__order-button"
+          >
             Order
           </button>
         </div>
