@@ -1,0 +1,114 @@
+.basket-page {
+  background-color: white;
+  color: black;
+  height: 100%;
+  padding: 0 70px;
+  padding-bottom: 20px;
+
+  &__button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    &__united {
+      display: flex;
+      gap: 20px;
+
+      &__clear-basket-button {
+        cursor: pointer;
+        padding: 14px 50px;
+        border-radius: 25px;
+        background-color: white;
+        color: #f29c0d;
+        font-size: 15px;
+        border: solid 1px #f29c0d;
+        font-weight: bold;
+      }
+
+      &__clear-basket-button:hover {
+        background-color: #f29c0d;
+        color: white;
+      }
+
+      &__button {
+        cursor: pointer;
+        padding: 14px 50px;
+        border-radius: 25px;
+        background-color: #f29c0d;
+        font-size: 15px;
+        border: none;
+      }
+
+      &__button:hover {
+        background-color: #ffab24;
+      }
+
+      &__x {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &__text {
+          margin-right: 25px;
+          font-size: 36px;
+          font-weight: bold;
+        }
+        &__checkout-button {
+          cursor: pointer;
+          padding: 14px 70px;
+          border-radius: 25px;
+          background-color: #f29c0d;
+          font-size: 25px;
+          border: none;
+        }
+        &__checkout-button:hover {
+          background-color: #ffab24;
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding-top: 72px;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  &__book-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    &__wrapper {
+      &__text {
+        margin-left: 20px;
+      }
+      display: flex;
+
+      &__title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      &__author {
+        font-size: 18px;
+      }
+      &__price {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.bin {
+  cursor: pointer;
+}
+
+.z {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}

@@ -1,0 +1,119 @@
+.checkout-page {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  padding: 0 30px;
+  color: black;
+
+  &__title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 70px;
+    color: black;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 50px;
+    &__shipping {
+      display: flex;
+      flex-direction: column;
+      border: solid 1px rgb(0, 0, 0, 50%);
+      border-radius: 20px;
+      padding: 40px;
+
+      &__title {
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      &__line {
+        border: solid 1px rgb(0, 0, 0, 30%);
+        margin-bottom: 40px;
+      }
+      &__input {
+        background-color: transparent;
+        border: solid 1px rgb(0, 0, 0, 50%);
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        color: black;
+      }
+    }
+    &__info {
+      border: solid 1px rgb(0, 0, 0, 50%);
+      border-radius: 20px;
+      padding: 25px;
+      &__title {
+        color: black;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      &__line {
+        border: solid 1px rgb(0, 0, 0, 30%);
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      &__y {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.x {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  background-color: #e41e1e;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 15px 50px;
+  color: white;
+}
+
+.button-s {
+  background-color: #e41e1e;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 25px;
+  padding: 10px 10px;
+  color: white;
+  border: none;
+}
+
+.yellow {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: rgb(252, 198, 111, 70%);
+  padding: 15px;
+}
+
+.text1 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+  color: 191D81;
+}
+
+.line {
+  border: solid 1px rgb(0, 0, 0, 30%);
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.text2 {
+  padding: 10px;
+}

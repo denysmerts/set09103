@@ -96,5 +96,9 @@
       border-radius: 10px;
       cursor: pointer;
     }
+
+    &__explore-button:hover {
+      background-color: #e99f27;
+    }
   }
 }
