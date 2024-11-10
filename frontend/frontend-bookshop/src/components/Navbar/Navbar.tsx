@@ -7,9 +7,9 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar_intro">
-        <div className="navbar_logo">
+        <NavLink to="/" className="navbar_logo">
           <SVG />
-        </div>
+        </NavLink>
         <div className="navbar_title">
           Cozy <br /> Bookpoint
         </div>
