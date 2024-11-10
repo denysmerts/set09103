@@ -1,10 +1,16 @@
-import './Searchbar.scss';
+import { useNavigate } from "react-router-dom";
+import "./Searchbar.scss";
 
 export const Searchbar = () => {
-    return (
-        <div className='search-container'>
-            <input className='search-container_input' type="text" placeholder='Search a Book'/>
-            <button className='search-container_button'>Search</button>
-        </div>
-    );
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate("/shop"); // Navigate to the shop page
+  };
+
+  return (
+    <button className="search-container_button" onClick={handleSearch}>
+      Search
+    </button>
+  );
 };
