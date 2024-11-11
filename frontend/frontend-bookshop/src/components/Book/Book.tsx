@@ -10,6 +10,7 @@ type Book = {
 };
 
 type BookShopProps = {
+   books: Book[];	
   onAddToBasket: (book: Book) => void;
   isBookInBasket: (bookId: number) => boolean;
 };

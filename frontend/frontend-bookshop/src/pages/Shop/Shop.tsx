@@ -7,7 +7,7 @@ type BookType = {
   id: number;
   title: string;
   author: string;
-  coverImage: string;
+  cover_image: string;
   price: number;
 };
 
