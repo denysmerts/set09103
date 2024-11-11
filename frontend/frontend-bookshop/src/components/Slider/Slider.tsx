@@ -12,7 +12,7 @@ type BookSliderProps = {
   books: Book[];
 };
 
-export const Slider: React.FC<BookSliderProps> = ({ books }) => {
+export const Slider: React.FC<BookSliderProps> = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [fetchedBooks, setFetchedBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
