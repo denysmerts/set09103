@@ -17,7 +17,6 @@ export const Basket = () => {
     navigate("/shop");
   };
 
-  // Import useNavigate and navigate
   const handleCheckout = () => {
     const totalPrice = calculateTotalPrice();
     navigate("/checkout", { state: { totalPrice } });
@@ -26,19 +25,16 @@ export const Basket = () => {
   const [basket, setBasket] = useState<Book[]>([]);
 
   useEffect(() => {
-    // Retrieve the basket from localStorage when the component mounts
     const savedBasket = JSON.parse(localStorage.getItem("basket") || "[]");
     setBasket(savedBasket);
   }, []);
 
-  // Function to remove a book from the basket
   const handleRemoveFromBasket = (bookId: number) => {
     const updatedBasket = basket.filter((book) => book.id !== bookId);
     localStorage.setItem("basket", JSON.stringify(updatedBasket));
     setBasket(updatedBasket);
   };
 
-  // Function to clear the entire basket
   const handleClearBasket = () => {
     localStorage.removeItem("basket");
     setBasket([]);

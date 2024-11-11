@@ -1,7 +1,7 @@
 .book_list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); // Ensures 4 items per row
-  gap: 30px; // Adds space between grid items
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px; 
   padding: 0 40px;
 }
 
@@ -9,19 +9,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; // Center content within the book item
+  align-items: center;
   padding: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.45); // Adjusted opacity syntax
+  border: 1px solid rgba(0, 0, 0, 0.45);
   border-radius: 10px;
   color: #1e1e1e;
-  max-width: 200px; // Ensures the book card doesn't get too wide
+  max-width: 200px;
 
   img {
-    width: 150px; // Sets a consistent width for the book cover
+    width: 150px;
     height: auto;
-    object-fit: cover; // Ensures the image scales properly
-    border-radius: 5px; // Adds a slight curve to the image corners
-    margin-bottom: 10px; // Space between the image and text
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
 
   &__title {
@@ -55,12 +55,12 @@
     background-color: transparent;
     border-radius: 10px;
     cursor: pointer;
-    width: 100%; // Ensure button takes full width of container
+    width: 100%;
 
     &--disabled {
-      background-color: #f6f6f6; /* Background color when the button is disabled */
-      color: #000000; /* Text color for disabled state */
-      cursor: not-allowed; /* Shows 'not-allowed' cursor */
+      background-color: #f6f6f6;
+      color: #000000;
+      cursor: not-allowed;
     }
   }
 

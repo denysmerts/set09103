@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Book.scss";
 
-// Define the Book type
 type Book = {
   id: number;
   title: string;
   author: string;
-  cover_image: string; // URL to the book's cover image
+  cover_image: string; 
   price: number;
 };
 
 type BookShopProps = {
-  onAddToBasket: (book: Book) => void; // Function to handle adding books to the basket
+  onAddToBasket: (book: Book) => void;
   isBookInBasket: (bookId: number) => boolean;
 };
 
@@ -20,9 +19,8 @@ export const Book = ({ onAddToBasket, isBookInBasket }: BookShopProps) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch books from the API
   useEffect(() => {
-    fetch("/api/books") // Replace with your actual API endpoint
+    fetch("/api/books")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch books");
@@ -55,7 +53,7 @@ export const Book = ({ onAddToBasket, isBookInBasket }: BookShopProps) => {
             className={`book-item__button ${
               isBookInBasket(book.id) ? "book-item__button--disabled" : ""
             }`}
-            disabled={isBookInBasket(book.id)} // Disable if the book is already in the basket
+            disabled={isBookInBasket(book.id)}
           >
             {isBookInBasket(book.id)
               ? "Already in the basket"

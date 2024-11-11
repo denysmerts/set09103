@@ -17,7 +17,6 @@ export const Checkout = () => {
   const location = useLocation();
   const totalPrice = location.state?.totalPrice || 0; // Fallback to 0 if no data
 
-  // Handle form data change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({

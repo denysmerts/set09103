@@ -3,7 +3,6 @@ import "./Shop.scss";
 import { Book } from "../../components/Book/Book";
 import { books } from "../../mockData/books";
 
-// Type for the book
 type BookType = {
   id: number;
   title: string;
@@ -13,25 +12,22 @@ type BookType = {
 };
 
 export const Shop = () => {
-  // State to track the basket
+ 
   const [basket, setBasket] = useState<BookType[]>([]);
 
-  // Load basket from localStorage when the component mounts
   useEffect(() => {
     const savedBasket = JSON.parse(localStorage.getItem("basket") || "[]");
     setBasket(savedBasket);
   }, []);
 
-  // Function to handle adding a book to the basket
   const handleAddToBasket = (book: BookType) => {
     const updatedBasket = [...basket, book];
     setBasket(updatedBasket); // Update the state immediately
     localStorage.setItem("basket", JSON.stringify(updatedBasket)); // Update localStorage
   };
 
-  // Function to check if a book is already in the basket
   const isBookInBasket = (bookId: number): boolean => {
-    return basket.some((book) => book.id === bookId); // Check against the state
+    return basket.some((book) => book.id === bookId);
   };
 
   return (
