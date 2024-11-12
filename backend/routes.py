@@ -8,7 +8,7 @@ order_routes = Blueprint('order_routes', __name__)
 def say_hi():
     return 'Welcome to Bookshop API!'
 
-@book_routes.route('/api/books', methods=['GET'])
+@book_routes.route('/books', methods=['GET'])
 def get_books():
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -24,7 +24,7 @@ def get_books():
         'cover_image': book['cover_image']
     } for book in books])
 
-@order_routes.route('/api/orders', methods=['POST'])
+@order_routes.route('/orders', methods=['POST'])
 def save_shipping_details():
     shipping_data = request.get_json()
     first_name = shipping_data.get('firstName')
